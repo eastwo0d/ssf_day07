@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        table, tr, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>These are the apps from {{catApp}}</h1>
+    <h4>Total number : {{totalNum}}</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>app_id</th>
+                <th>Name</th>
+                <th>category</th>
+                <th>rating</th>
+                <th>installs</th>
+            </tr>
+        </thead>
+        <tbody class="center">
+            {{#each apps}}
+                <tr>
+                    <td>{{this.app_id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.category}}</td>
+                    <td>{{this.rating}}</td>
+                    <td>{{this.installs}}</td>
+                </tr>
+            {{/each}}
+
+
+        </tbody>
+
+
+
+    </table>
+
+</body>
+</html>
